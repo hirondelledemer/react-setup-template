@@ -26,7 +26,7 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         with:
-          vercel_project_id: 'prj_P0FMb4wUXsRvtA2TSvXXV3Wvc4tU'
+          vercel_project_id: 'prj_tBN9hsNqwZtvgGZsMjifon3H9ET2'
       - name: Get URL
         run: echo "https://${{ steps.vercel_preview_url.outputs.preview_url }}"
       - name: Upgrade Yarn
