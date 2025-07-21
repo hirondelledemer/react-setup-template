@@ -1,5 +1,5 @@
 import { Page, Locator } from '@playwright/test';
-import { mockData } from './server-mock-data';
+import { PROFILE } from './profile-mock-data';
 
 export class AppDriver {
   readonly page: Page;
@@ -38,7 +38,7 @@ export class AppDriver {
 
   async mockProfileData() {
     await this.page.route('*/**/auth/me', async (route) => {
-      await route.fulfill({ json: mockData });
+      await route.fulfill({ json: PROFILE });
     });
   }
 }

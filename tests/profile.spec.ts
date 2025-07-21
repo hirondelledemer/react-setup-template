@@ -4,7 +4,7 @@ import { urls, USER } from './utils/data';
 
 test.describe('Profile', () => {
   test.describe('user logged in', () => {
-    test('user should see servers when logged in', async ({ page }) => {
+    test('user should see profile data when logged in', async ({ page }) => {
       const loginPage = new AppDriver(page);
 
       await loginPage.mockProfileData();
