@@ -4,7 +4,7 @@
 
 ## Demo
 
-A live demo is available [here](https://react-login-seven-virid.vercel.app/).
+A live demo is available [here](https://react-setup-template.vercel.app/).
 
 ## Stack
 
