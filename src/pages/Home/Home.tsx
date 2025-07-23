@@ -1,3 +1,4 @@
+import Header from '@src/components/Header/Header';
 import Navigation from '@src/components/Navigation/Navigation';
 import React from 'react';
 
@@ -7,7 +8,7 @@ const Home: React.FC = () => {
       <Navigation />
       <section className='px-6 py-10' role='main'>
         <div className='w-full'>
-          <h1 className='mt-4 text-2xl font-medium text-gray-800'>Home page</h1>
+          <Header>Home page</Header>
           <div>this is a public home page</div>
         </div>
       </section>
