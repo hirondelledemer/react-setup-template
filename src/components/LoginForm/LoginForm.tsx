@@ -1,5 +1,3 @@
-// todo: remove tooltip
-
 import { useLogin } from '@src/hooks/use-login';
 import React, { FormEvent, useState } from 'react';
 import UserIcon from '../icons/User';

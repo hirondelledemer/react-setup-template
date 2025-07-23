@@ -3,17 +3,17 @@ import clsx from 'clsx';
 
 type Ref = HTMLButtonElement;
 
-interface HeaderLinkOptions {
+interface NavigationLinkOptions {
   active?: boolean;
 }
 
-export type HeaderLinkProps = React.DetailedHTMLProps<
+export type NavigationLinkProps = React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLElement>,
   HTMLButtonElement
 > &
-  HeaderLinkOptions;
+  NavigationLinkOptions;
 
-const HeaderLink = forwardRef<Ref, HeaderLinkProps>((props, ref) => {
+const NavigationLink = forwardRef<Ref, NavigationLinkProps>((props, ref) => {
   const { className, active, children, ...rest } = props;
 
   const merged = clsx(
@@ -32,5 +32,5 @@ const HeaderLink = forwardRef<Ref, HeaderLinkProps>((props, ref) => {
   );
 });
 
-HeaderLink.displayName = 'HeaderLink';
-export default HeaderLink;
+NavigationLink.displayName = 'NavigationLink';
+export default NavigationLink;

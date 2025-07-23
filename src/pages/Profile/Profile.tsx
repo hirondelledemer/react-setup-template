@@ -1,4 +1,4 @@
-import Header from '@src/components/Header';
+import Header from '@src/components/Navigation';
 import { default as ProfileComponent } from '@src/components/Profile';
 
 import React from 'react';

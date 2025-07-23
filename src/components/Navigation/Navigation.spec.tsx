@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import * as authHooks from '@src/hooks/use-auth';
-import Header from './Header';
+import Navigation from '.';
 import { BrowserRouter } from 'react-router-dom';
 
 jest.mock('react-router-dom', () => ({
@@ -13,7 +13,7 @@ jest.mock('react-router-dom', () => ({
   }),
 }));
 
-describe('HeaderLink', () => {
+describe('NavigationLink', () => {
   describe('user is logged in', () => {
     it('should home/profile/logout buttons', async () => {
       jest
@@ -22,7 +22,7 @@ describe('HeaderLink', () => {
 
       render(
         <BrowserRouter>
-          <Header />
+          <Navigation />
         </BrowserRouter>,
       );
 
@@ -49,7 +49,7 @@ describe('HeaderLink', () => {
 
       render(
         <BrowserRouter>
-          <Header />
+          <Navigation />
         </BrowserRouter>,
       );
 
