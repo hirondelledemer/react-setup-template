@@ -1,4 +1,4 @@
-# React Login Page example
+# React Setup template
 
 <br>
 
@@ -6,71 +6,65 @@
 
 A live demo is available [here](https://react-setup-template.vercel.app/).
 
-## Stack
+# Development Guide
 
-- React
-- TypeScript
-- ESLint
-- Webpack
-- React Fast Refresh + Webpack HMR
-- Tailwind CSS
-- Jest
-- Playwright
-- React Router Dom
-- React Query
+## Prerequisites
 
-<br />
+- Node.js 18+
+- Yarn package manager
+- Git
 
-## Installation
+## Getting Started
 
-Clone the repository:
+1. Clone the repository
+2. Install dependencies: `yarn install`
+3. Start development server: `yarn start`
+4. Open http://localhost:3002
+
+## Project Structure
 
 ```
-git clone git@github.com:hirondelledemer/react-setup-template.git
+src/
+├── app/           # App-level components and routing
+├── components/    # Reusable UI components
+├── hooks/         # Custom React hooks
+├── pages/         # Page components
+├── utils/         # Utility functions and constants
+└── index.css      # Global styles
 ```
 
-Install dependencies:
+## Available Scripts
 
-```
-yarn install
-```
+- `yarn start` - Start development server
+- `yarn build` - Build for production
+- `yarn serve` - Serve production build
+- `yarn lint` - Run ESLint
+- `yarn test` - Run unit tests
+- `yarn test:watch` - Run tests in watch mode
+- `yarn test:e2e` - Run E2E tests
 
-<br />
+## Code Style
 
-## Development
+- Use TypeScript for all new code
+- Follow ESLint configuration
+- Use Prettier for formatting
+- Write meaningful commit messages
 
-To start development:
+## Testing
 
-```
-yarn start
-```
+- Unit tests with Jest + React Testing Library
+- E2E tests with Playwright
+- Accessibility testing with axe-core
 
-To lint:
+## Environment Variables
 
-```
-yarn lint
-```
+Create a `.env` file based on `.env.example`:
 
-To run tests:
-
-```
-yarn test         // unit tests
-yarn test:watch   // unit tests in watch mode
-yarn test:e2e     // e2e tests
-```
-
-<br />
-
-## Production
-
-To build production-ready files:
-
-```
-yarn build
+```bash
+REACT_APP_API_BASE_URL=https://dummyjson.com
+REACT_APP_API_TIMEOUT=10000
 ```
 
-To serve production files:
+## Deployment
 
-```
-yarn serve
-```
+The app is automatically deployed to Vercel on push to main branch.
