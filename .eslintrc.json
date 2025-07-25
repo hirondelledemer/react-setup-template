@@ -10,20 +10,37 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
-    "plugin:import/warnings"
+    "plugin:import/warnings",
+    "plugin:storybook/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       },
       "alias": {
         "map": [
-          ["@src", "./src"],
-          ["@assets", "./assets"]
+          [
+            "@src",
+            "./src"
+          ],
+          [
+            "@assets",
+            "./assets"
+          ]
         ],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     },
     "react": {
