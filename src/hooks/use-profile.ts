@@ -1,10 +1,10 @@
-import { TOKEN_KEY } from '@src/utils/consts/local-storage';
 import { useQuery } from '@tanstack/react-query';
+import { useAuth } from './use-auth';
 import { useLocalStorage } from './use-local-storage';
 import { Profile } from '@src/utils/types/data';
-import { useAuth } from './use-auth';
+import { TOKEN_KEY } from '@src/utils/consts/local-storage';
 
-const URL = 'https://dummyjson.com/auth/me';
+const URL = `${process.env.API_BASE_URL}/auth/me`;
 
 const fetchProfile = async (token: string) => {
   const res = await fetch(URL, {
@@ -19,7 +19,6 @@ const fetchProfile = async (token: string) => {
     }
     throw new Error('oops, something went wrong');
   }
-
   return res.json();
 };
 

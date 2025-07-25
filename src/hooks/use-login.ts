@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from './use-auth';
 import { InputProps, UserData } from '@src/utils/types/data';
 
-const URL = 'https://dummyjson.com/auth/login';
+const URL = `${process.env.API_BASE_URL}/auth/login`;
 
 const fetchLogin = async (params: InputProps) => {
   const res = await fetch(URL, {
