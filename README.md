@@ -61,8 +61,7 @@ src/
 Create a `.env` file based on `.env.example`:
 
 ```bash
-REACT_APP_API_BASE_URL=https://dummyjson.com
-REACT_APP_API_TIMEOUT=10000
+API_BASE_URL=https://dummyjson.com
 ```
 
 ## Deployment
