@@ -5,13 +5,11 @@ import { HOME, LOGIN, PROFILE } from '@src/utils/consts/routes';
 import '../index.css';
 import { PublicRoutes } from './PublicRoutes';
 
-// Lazy load page components
-const Home = lazy(() => import('../pages/Home'));
-const Login = lazy(() => import('../pages/Login'));
+const Home = lazy(() => import('@src/pages/Home'));
+const Login = lazy(() => import('@src/pages/Login'));
 const Profile = lazy(() => import('@src/pages/Profile'));
 const NotFound = lazy(() => import('@src/pages/NotFound'));
 
-// Loading component for Suspense fallback
 const LoadingSpinner: React.FC = () => (
   <div className='flex items-center justify-center min-h-screen'>
     <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>
