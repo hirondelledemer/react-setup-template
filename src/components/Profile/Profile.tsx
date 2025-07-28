@@ -2,7 +2,6 @@ import { useProfile } from '@src/hooks/use-profile';
 import React from 'react';
 import Skeleton from '../Skeleton';
 import { GENDER_LABEL } from './Profile.data';
-import { Gender } from '@src/utils/types/data';
 
 const IMG_SIZE_PX = 100;
 
@@ -26,7 +25,7 @@ const Profile: React.FC = () => {
               Name: {data.firstName} {data.lastName}
             </div>
             <div>Email: {data.email}</div>
-            <div>Gender: {GENDER_LABEL[data.gender as Gender]}</div>
+            <div>Gender: {GENDER_LABEL[data.gender]}</div>
           </div>
         </div>
       )}
