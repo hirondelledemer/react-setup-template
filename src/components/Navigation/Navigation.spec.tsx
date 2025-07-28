@@ -1,7 +1,8 @@
 import '@testing-library/jest-dom';
 
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import { screen } from '@testing-library/dom';
 import * as authHooks from '@src/hooks/use-auth';
 import Navigation from '.';
 import { BrowserRouter } from 'react-router-dom';

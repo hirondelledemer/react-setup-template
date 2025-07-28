@@ -1,7 +1,8 @@
 import '@testing-library/jest-dom';
 
 import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/dom';
 import LoginForm from './LoginForm';
 import * as loginHooks from '@src/hooks/use-login';
 import { UseMutationResult } from '@tanstack/react-query';

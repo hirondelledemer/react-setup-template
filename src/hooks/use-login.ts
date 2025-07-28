@@ -6,7 +6,7 @@ import { InputProps, UserData } from '@src/utils/types/data';
 
 const URL = `${process.env.API_BASE_URL}/auth/login`;
 
-const fetchLogin = async (params: InputProps) => {
+const fetchLogin = async (params: InputProps): Promise<UserData> => {
   const res = await fetch(URL, {
     method: 'POST',
     headers: {
@@ -26,8 +26,8 @@ export const useLogin = () => {
   const { setToken } = useAuth();
   const navigate = useNavigate();
   return useMutation<UserData, Error, InputProps>({
-    mutationFn: (input) => fetchLogin(input),
-    onSuccess: async (data) => {
+    mutationFn: (input: InputProps) => fetchLogin(input),
+    onSuccess: async (data: UserData) => {
       setToken(data.accessToken);
       navigate(PROFILE);
     },

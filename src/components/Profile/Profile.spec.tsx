@@ -1,5 +1,6 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import { screen } from '@testing-library/dom';
 import Profile from './Profile';
 import * as useProfileHook from '@src/hooks/use-profile';
 import { UseQueryResult } from '@tanstack/react-query';

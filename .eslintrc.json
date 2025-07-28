@@ -16,14 +16,30 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       },
       "alias": {
         "map": [
-          ["@src", "./src"],
-          ["@assets", "./assets"]
+          [
+            "@src",
+            "./src"
+          ],
+          [
+            "@assets",
+            "./assets"
+          ]
         ],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     },
     "react": {

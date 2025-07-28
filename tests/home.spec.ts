@@ -7,10 +7,11 @@ test.describe('Home', () => {
   test('should not have any automatically detectable accessibility issues', async ({
     page,
   }) => {
-    const loginPage = new AppDriver(page);
+    const homePage = new AppDriver(page);
 
-    await loginPage.goto(urls.BASE);
+    await homePage.goto(urls.BASE);
 
+    await expect(homePage.homeTitle).toBeVisible();
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
