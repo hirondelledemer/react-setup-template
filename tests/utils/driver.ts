@@ -7,6 +7,8 @@ export class AppDriver {
   readonly passwordInput: Locator;
   readonly loginButton: Locator;
   readonly profileTitle: Locator;
+  readonly loginTitle: Locator;
+  readonly homeTitle: Locator;
   readonly error: Locator;
 
   constructor(page: Page) {
@@ -17,6 +19,10 @@ export class AppDriver {
       .locator('form')
       .getByRole('button', { name: 'Login' });
     this.profileTitle = page.getByRole('heading', { name: 'Profile' });
+    this.homeTitle = page.getByRole('heading', { name: 'Home page' });
+    this.loginTitle = page.getByRole('heading', {
+      name: 'Login To Your Account',
+    });
     this.error = page.getByText('Username or password is not valid');
   }
 

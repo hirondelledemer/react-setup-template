@@ -9,6 +9,7 @@ test.describe('Login', () => {
 
     await loginPage.goto(urls.LOGIN);
 
+    await expect(loginPage.loginTitle).toBeVisible();
     await expect(page).toHaveScreenshot('login-page.png');
 
     await loginPage.fillUsername(USER.USERNAME);
@@ -40,7 +41,7 @@ test.describe('Login', () => {
     const loginPage = new AppDriver(page);
 
     await loginPage.goto(urls.LOGIN);
-
+    await expect(loginPage.loginTitle).toBeVisible();
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
     expect(accessibilityScanResults.violations).toEqual([]);
   });
